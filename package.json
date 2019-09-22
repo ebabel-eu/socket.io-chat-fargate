@@ -11,6 +11,7 @@
     "socket.io": "2.0.4"
   },
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "docker": "docker build -t chat ."
   }
 }

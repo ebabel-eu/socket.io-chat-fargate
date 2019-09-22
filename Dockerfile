@@ -5,6 +5,6 @@ RUN yarn install
 ADD . .
 
 FROM mhart/alpine-node:base-9
-COPY --from=build /src .
+COPY --from=build /srv .
 EXPOSE 3000
 CMD ["node", "index.js"]
