@@ -2,6 +2,8 @@
 
 A simple chat demo for socket.io that is to run on AWS ECR Registry and AWS Fargate.
 
+Source: [Building a Socket.io chat app and deploying it using AWS Fargate](https://medium.com/containers-on-aws/building-a-socket-io-chat-app-and-deploying-it-using-aws-fargate-86fd7cbce13f)
+
 ## Initial setup
 
 ```
