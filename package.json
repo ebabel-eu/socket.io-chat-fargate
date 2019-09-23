@@ -12,6 +12,8 @@
   },
   "scripts": {
     "start": "node index.js",
-    "docker": "docker build -t chat ."
+    "docker-build": "docker build -t chat .",
+    "docker-run": "docker run -d --name chat -p 3000:3000 chat",
+    "docker-list": "docker ps"
   }
 }
