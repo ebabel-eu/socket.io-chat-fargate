@@ -19,6 +19,16 @@ docker push ACCOUNT_ID.dkr.ecr.eu-west-1.amazonaws.com/chat:latest
 
 Note: `ACCOUNT_ID` is an integer. It can be found when logging in to AWS console, where username johndoe @ ACCOUNT_ID is in the top right corner. Do not use any hyphens.
 
+## Specifiy an AWS region
+
+If it's not already done on your machine, you need to configure which region to work with.
+
+```
+aws configure
+```
+
+You will also need your AWS Access Key ID, and your AWS Secret Access Key. The default output format can be json (default), text (useful for grep parsing), or table (human readable).
+
 ## Deploy to Fargate
 
 ```
