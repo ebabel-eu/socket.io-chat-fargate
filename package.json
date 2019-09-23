@@ -11,9 +11,6 @@
     "socket.io": "2.0.4"
   },
   "scripts": {
-    "start": "node index.js",
-    "docker-build": "docker build -t chat .",
-    "docker-run": "docker run -d --name chat -p 3000:3000 chat",
-    "docker-list": "docker ps"
+    "start": "node index.js"
   }
 }
