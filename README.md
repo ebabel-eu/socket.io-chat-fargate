@@ -36,3 +36,21 @@ You will also need your AWS Access Key ID, and your AWS Secret Access Key. The d
 ```
 aws cloudformation deploy --stack-name=production --template-file=recipes/public-vpc.yml --capabilities=CAPABILITY_IAM
 ```
+
+This will create a `deployment` stack, which will be the parent of the next setup, but this time this is done in the AWS Console web app.
+
+- Navigate to `CloudFormation` in AWS Console
+- Click on the button `Create stack`
+- Choose to upload the recipe in `recipes\public-service.yml`
+- Enter these details:
+  - Stack name: chat
+  - ContainerCpu: 256
+  - ContainerMemory: 512
+  - ContainerPort: 3000 (because the Node.js socket.io is running on port 3000 inside the Docker container)
+  - DesiredCount: 1 (because that's enough for a small app being developed)
+  - ImageUrl: ACCOUNT_ID.dkr.ecr.eu-west-1.amazonaws.com/chat (this was setup earlier, use the same)
+  - Path: *
+  - Priority: 1
+  - Role: (leave blank since this app doesn't connect to other AWS services like S3)
+  - ServiceName: chat
+  - Stack name: production (that's the name of the parent that was setup earlier using command line)
